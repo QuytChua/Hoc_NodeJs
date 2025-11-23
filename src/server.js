@@ -14,6 +14,8 @@ app.get("/abc", (req, res) => {
   res.send("checking abc route");
 });
 
+//config static files
+app.use(express.static(path.join(__dirname, "public")));
 // config template engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
